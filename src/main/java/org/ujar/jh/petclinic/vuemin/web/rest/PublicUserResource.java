@@ -1,7 +1,6 @@
 package org.ujar.jh.petclinic.vuemin.web.rest;
 
 import java.util.*;
-import java.util.Collections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -20,9 +19,8 @@ import tech.jhipster.web.util.PaginationUtil;
 @RequestMapping("/api")
 public class PublicUserResource {
 
-    private static final List<String> ALLOWED_ORDERED_PROPERTIES = Collections.unmodifiableList(
-        Arrays.asList("id", "login", "firstName", "lastName", "email", "activated", "langKey")
-    );
+    private static final List<String> ALLOWED_ORDERED_PROPERTIES =
+        List.of("id", "login", "firstName", "lastName", "email", "activated", "langKey");
 
     private final Logger log = LoggerFactory.getLogger(PublicUserResource.class);
 
