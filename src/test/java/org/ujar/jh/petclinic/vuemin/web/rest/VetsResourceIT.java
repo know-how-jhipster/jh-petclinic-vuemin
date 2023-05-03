@@ -205,7 +205,7 @@ class VetsResourceIT {
         int databaseSizeBeforeUpdate = vetsRepository.findAll().size();
 
         // Update the vets
-        Vets updatedVets = vetsRepository.findById(vets.getId()).get();
+        Vets updatedVets = vetsRepository.findById(vets.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedVets are not directly saved in db
         em.detach(updatedVets);
         updatedVets.firstname(UPDATED_FIRSTNAME).lastname(UPDATED_LASTNAME);

@@ -269,7 +269,7 @@ class OwnersResourceIT {
         int databaseSizeBeforeUpdate = ownersRepository.findAll().size();
 
         // Update the owners
-        Owners updatedOwners = ownersRepository.findById(owners.getId()).get();
+        Owners updatedOwners = ownersRepository.findById(owners.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedOwners are not directly saved in db
         em.detach(updatedOwners);
         updatedOwners

@@ -181,7 +181,7 @@ class TypesResourceIT {
         int databaseSizeBeforeUpdate = typesRepository.findAll().size();
 
         // Update the types
-        Types updatedTypes = typesRepository.findById(types.getId()).get();
+        Types updatedTypes = typesRepository.findById(types.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedTypes are not directly saved in db
         em.detach(updatedTypes);
         updatedTypes.name(UPDATED_NAME);
