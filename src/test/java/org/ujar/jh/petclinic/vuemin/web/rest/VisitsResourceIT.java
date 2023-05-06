@@ -207,7 +207,7 @@ class VisitsResourceIT {
         int databaseSizeBeforeUpdate = visitsRepository.findAll().size();
 
         // Update the visits
-        Visits updatedVisits = visitsRepository.findById(visits.getId()).get();
+        Visits updatedVisits = visitsRepository.findById(visits.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedVisits are not directly saved in db
         em.detach(updatedVisits);
         updatedVisits.visitdate(UPDATED_VISITDATE).description(UPDATED_DESCRIPTION);

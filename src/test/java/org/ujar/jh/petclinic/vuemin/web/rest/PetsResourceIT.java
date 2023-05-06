@@ -207,7 +207,7 @@ class PetsResourceIT {
         int databaseSizeBeforeUpdate = petsRepository.findAll().size();
 
         // Update the pets
-        Pets updatedPets = petsRepository.findById(pets.getId()).get();
+        Pets updatedPets = petsRepository.findById(pets.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedPets are not directly saved in db
         em.detach(updatedPets);
         updatedPets.name(UPDATED_NAME).birthdate(UPDATED_BIRTHDATE);

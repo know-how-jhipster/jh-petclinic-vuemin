@@ -220,7 +220,7 @@ class SpecialtiesResourceIT {
         int databaseSizeBeforeUpdate = specialtiesRepository.findAll().size();
 
         // Update the specialties
-        Specialties updatedSpecialties = specialtiesRepository.findById(specialties.getId()).get();
+        Specialties updatedSpecialties = specialtiesRepository.findById(specialties.getId()).orElseThrow();
         // Disconnect from session so that the updates on updatedSpecialties are not directly saved in db
         em.detach(updatedSpecialties);
         updatedSpecialties.name(UPDATED_NAME);
