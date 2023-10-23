@@ -61,7 +61,7 @@
         <archunit-junit5.version>0.22.0</archunit-junit5.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <caffeine.version>3.1.8</caffeine.version>
-        <typesafe.version>1.4.2</typesafe.version>
+        <typesafe.version>1.4.3</typesafe.version>
         <!-- Plugin versions -->
         <maven-clean-plugin.version>3.3.1</maven-clean-plugin.version>
         <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
