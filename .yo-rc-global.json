@@ -1,7 +1,7 @@
 {
   "generator-jhipster:7.9.3": {
     "promptValues": {
-      "packageName": "org.ujar.jh.petclinic.vuemin",
+      "packageName": "dev.knowhowto.jh.petclinic.vuemin",
       "nativeLanguage": "en"
     }
   }
