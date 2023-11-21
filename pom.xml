@@ -54,8 +54,10 @@
         <hibernate.version>5.6.15.Final</hibernate.version>
         <!-- The liquibase version should match the one managed by
         https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies/${spring-boot.version} -->
-        <liquibase.version>4.24.0</liquibase.version>
+
+        <liquibase.version>4.25.0</liquibase.version>
         <liquibase-hibernate5.version>4.25.0</liquibase-hibernate5.version>
+
         <validation-api.version>2.0.1.Final</validation-api.version>
         <jaxb-runtime.version>4.0.4</jaxb-runtime.version>
         <archunit-junit5.version>0.22.0</archunit-junit5.version>
@@ -76,7 +78,7 @@
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <maven-checkstyle-plugin.version>3.3.1</maven-checkstyle-plugin.version>
-        <checkstyle.version>10.12.4</checkstyle.version>
+        <checkstyle.version>10.12.5</checkstyle.version>
         <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
         <frontend-maven-plugin.version>1.14.2</frontend-maven-plugin.version>
         <checksum-maven-plugin.version>1.11</checksum-maven-plugin.version>
